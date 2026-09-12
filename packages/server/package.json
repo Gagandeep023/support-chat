@@ -1,6 +1,6 @@
 {
   "name": "@gagandeep023/support-chat-server",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Mountable support-chat engine: HTTP router, socket gateway, and store interfaces.",
   "type": "module",
   "license": "MIT",
@@ -57,7 +57,7 @@
     "typecheck": "tsc --build"
   },
   "dependencies": {
-    "@gagandeep023/support-chat-core": "0.0.0",
+    "@gagandeep023/support-chat-core": "^0.1.0",
     "socket.io": "^4.8.0",
     "zod": "^3.24.0"
   },
@@ -97,5 +97,18 @@
     "@huggingface/transformers": {
       "optional": true
     }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gagandeep023/support-chat.git",
+    "directory": "packages/server"
+  },
+  "homepage": "https://github.com/Gagandeep023/support-chat#readme",
+  "bugs": {
+    "url": "https://github.com/Gagandeep023/support-chat/issues"
+  },
+  "author": "Gagandeep Bhatia",
+  "publishConfig": {
+    "access": "public"
   }
 }

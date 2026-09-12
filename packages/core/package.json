@@ -1,6 +1,6 @@
 {
   "name": "@gagandeep023/support-chat-core",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Shared types, wire protocol, and provider interfaces for support-chat.",
   "type": "module",
   "license": "MIT",
@@ -20,12 +20,27 @@
       "require": "./dist/protocol/index.cjs"
     }
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsup",
     "typecheck": "tsc --build"
   },
   "dependencies": {
     "zod": "^3.24.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gagandeep023/support-chat.git",
+    "directory": "packages/core"
+  },
+  "homepage": "https://github.com/Gagandeep023/support-chat#readme",
+  "bugs": {
+    "url": "https://github.com/Gagandeep023/support-chat/issues"
+  },
+  "author": "Gagandeep Bhatia",
+  "publishConfig": {
+    "access": "public"
   }
 }

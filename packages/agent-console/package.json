@@ -1,6 +1,6 @@
 {
   "name": "@gagandeep023/support-chat-agent-console",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Agent console for support-chat: headless client plus a React component that drops into an existing dashboard.",
   "type": "module",
   "license": "MIT",
@@ -20,13 +20,40 @@
       "require": "./dist/react.cjs"
     }
   },
-  "files": ["dist"],
-  "scripts": { "build": "tsup", "typecheck": "tsc --build" },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --build"
+  },
   "dependencies": {
-    "@gagandeep023/support-chat-core": "0.0.0",
+    "@gagandeep023/support-chat-core": "^0.1.0",
     "socket.io-client": "^4.8.0"
   },
-  "peerDependencies": { "react": ">=18" },
-  "peerDependenciesMeta": { "react": { "optional": true } },
-  "devDependencies": { "@types/react": "^19.0.0", "react": "^19.0.0" }
+  "peerDependencies": {
+    "react": ">=18"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "react": "^19.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gagandeep023/support-chat.git",
+    "directory": "packages/agent-console"
+  },
+  "homepage": "https://github.com/Gagandeep023/support-chat#readme",
+  "bugs": {
+    "url": "https://github.com/Gagandeep023/support-chat/issues"
+  },
+  "author": "Gagandeep Bhatia",
+  "publishConfig": {
+    "access": "public"
+  }
 }
