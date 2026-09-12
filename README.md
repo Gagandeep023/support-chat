@@ -7,7 +7,7 @@ human when it should.
 Self-hosted by design: your database, your model key, your auth. The transcripts
 never leave your infrastructure, and nothing here phones home.
 
-> **Status:** not yet published to npm. Everything below runs from a checkout.
+All five packages are on npm under the `@gagandeep023` scope.
 
 ## Try it
 
