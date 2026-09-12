@@ -1,0 +1,18 @@
+{
+  "name": "@gagandeep023/support-chat-cli",
+  "version": "0.0.0",
+  "description": "Command line tools for support-chat: zero-infrastructure dev server, provider preflight, and model evaluation.",
+  "type": "module",
+  "license": "MIT",
+  "bin": { "support-chat": "./dist/index.js" },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": ["dist"],
+  "scripts": { "build": "tsup", "typecheck": "tsc --build" },
+  "dependencies": {
+    "@gagandeep023/support-chat-core": "0.0.0",
+    "@gagandeep023/support-chat-server": "0.0.0",
+    "@gagandeep023/support-chat-widget": "0.0.0"
+  },
+  "engines": { "node": ">=20" }
+}

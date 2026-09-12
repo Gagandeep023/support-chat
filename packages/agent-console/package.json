@@ -1,0 +1,32 @@
+{
+  "name": "@gagandeep023/support-chat-agent-console",
+  "version": "0.0.0",
+  "description": "Agent console for support-chat: headless client plus a React component that drops into an existing dashboard.",
+  "type": "module",
+  "license": "MIT",
+  "sideEffects": false,
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./react": {
+      "types": "./dist/react.d.ts",
+      "import": "./dist/react.js",
+      "require": "./dist/react.cjs"
+    }
+  },
+  "files": ["dist"],
+  "scripts": { "build": "tsup", "typecheck": "tsc --build" },
+  "dependencies": {
+    "@gagandeep023/support-chat-core": "0.0.0",
+    "socket.io-client": "^4.8.0"
+  },
+  "peerDependencies": { "react": ">=18" },
+  "peerDependenciesMeta": { "react": { "optional": true } },
+  "devDependencies": { "@types/react": "^19.0.0", "react": "^19.0.0" }
+}

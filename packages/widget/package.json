@@ -1,0 +1,55 @@
+{
+  "name": "@gagandeep023/support-chat-widget",
+  "version": "0.0.0",
+  "description": "Embeddable support chat widget: headless client, web component, and React wrapper.",
+  "type": "module",
+  "license": "MIT",
+  "sideEffects": [
+    "./dist/element.js",
+    "./dist/element.cjs"
+  ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./element": {
+      "types": "./dist/element.d.ts",
+      "import": "./dist/element.js",
+      "require": "./dist/element.cjs"
+    },
+    "./react": {
+      "types": "./dist/react.d.ts",
+      "import": "./dist/react.js",
+      "require": "./dist/react.cjs"
+    },
+    "./browser": "./dist/browser/support-chat.global.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --build"
+  },
+  "dependencies": {
+    "@gagandeep023/support-chat-core": "0.0.0",
+    "socket.io-client": "^4.8.0"
+  },
+  "peerDependencies": {
+    "react": ">=18"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "react": "^19.0.0"
+  }
+}

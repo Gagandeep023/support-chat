@@ -1,0 +1,12 @@
+// tsup builds its own TypeScript program for the .d.ts pass, which trips over
+// `composite: true` (TS6307). The monorepo still uses project references for
+// `tsc --build`; this config exists only for the declaration emit.
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "composite": false,
+    "incremental": false,
+    "declarationMap": false
+  },
+  "exclude": ["**/*.test.ts"]
+}

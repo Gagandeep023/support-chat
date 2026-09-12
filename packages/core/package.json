@@ -1,0 +1,31 @@
+{
+  "name": "@gagandeep023/support-chat-core",
+  "version": "0.0.0",
+  "description": "Shared types, wire protocol, and provider interfaces for support-chat.",
+  "type": "module",
+  "license": "MIT",
+  "sideEffects": false,
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./protocol": {
+      "types": "./dist/protocol/index.d.ts",
+      "import": "./dist/protocol/index.js",
+      "require": "./dist/protocol/index.cjs"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --build"
+  },
+  "dependencies": {
+    "zod": "^3.24.0"
+  }
+}
