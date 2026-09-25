@@ -1,6 +1,6 @@
 {
   "name": "@gagandeep023/support-chat-server",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Mountable support-chat engine: HTTP router, socket gateway, and store interfaces.",
   "type": "module",
   "license": "MIT",

@@ -1,6 +1,6 @@
 {
   "name": "@gagandeep023/support-chat-core",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Shared types, wire protocol, and provider interfaces for support-chat.",
   "type": "module",
   "license": "MIT",
