@@ -1,8 +1,17 @@
 {
   "name": "@gagandeep023/support-chat-widget",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Embeddable support chat widget: headless client, web component, and React wrapper.",
   "keywords": [
+    "support-chat",
+    "customer-support",
+    "chat-widget",
+    "web-component",
+    "react",
+    "embeddable",
+    "ai-chat",
+    "self-hosted",
+    "typescript",
     "gagan",
     "gagandeep",
     "gagandeep bhatia"

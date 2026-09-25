@@ -1,8 +1,16 @@
 {
   "name": "@gagandeep023/support-chat-cli",
-  "version": "0.1.1",
-  "description": "Command line tools for support-chat: zero-infrastructure dev server, provider preflight, and model evaluation.",
+  "version": "0.1.2",
+  "description": "Command line tools for support-chat: zero-infrastructure dev server, model health checks, and evaluation against your own docs.",
   "keywords": [
+    "support-chat",
+    "customer-support",
+    "cli",
+    "dev-server",
+    "llm-eval",
+    "ai-chat",
+    "self-hosted",
+    "typescript",
     "gagan",
     "gagandeep",
     "gagandeep bhatia"

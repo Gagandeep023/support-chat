@@ -1,8 +1,19 @@
 {
   "name": "@gagandeep023/support-chat-server",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Mountable support-chat engine: HTTP router, socket gateway, and store interfaces.",
   "keywords": [
+    "support-chat",
+    "customer-support",
+    "ai-chat",
+    "self-hosted",
+    "socket.io",
+    "rag",
+    "retrieval",
+    "bm25",
+    "pgvector",
+    "escalation",
+    "typescript",
     "gagan",
     "gagandeep",
     "gagandeep bhatia"

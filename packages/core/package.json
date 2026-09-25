@@ -1,8 +1,15 @@
 {
   "name": "@gagandeep023/support-chat-core",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Shared types, wire protocol, and provider interfaces for support-chat.",
   "keywords": [
+    "support-chat",
+    "customer-support",
+    "ai-chat",
+    "wire-protocol",
+    "zod",
+    "typescript",
+    "self-hosted",
     "gagan",
     "gagandeep",
     "gagandeep bhatia"

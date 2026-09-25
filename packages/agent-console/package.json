@@ -1,8 +1,16 @@
 {
   "name": "@gagandeep023/support-chat-agent-console",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Agent console for support-chat: headless client plus a React component that drops into an existing dashboard.",
   "keywords": [
+    "support-chat",
+    "customer-support",
+    "live-chat",
+    "agent-console",
+    "react",
+    "ai-chat",
+    "self-hosted",
+    "typescript",
     "gagan",
     "gagandeep",
     "gagandeep bhatia"
