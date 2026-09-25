@@ -61,7 +61,7 @@ support-chat eval --cases ./cases.jsonl [--docs ./docs] [--model <id>]
 ```
 
 ```jsonl
-{"question": "what does error E4021 mean?", "grounded": true, "escalate": false}
+{"question": "what is E4021?", "grounded": true, "escalate": false}
 {"question": "what is the capital of France?", "grounded": false}
 {"question": "I want to talk to a human", "escalate": true}
 ```

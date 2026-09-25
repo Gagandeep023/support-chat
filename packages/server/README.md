@@ -12,22 +12,36 @@ npm i @gagandeep023/support-chat-server
 ## Mounting it
 
 ```ts
-import { createSupportChat, AnthropicChatProvider } from "@gagandeep023/support-chat-server";
-import { PostgresDataStore } from "@gagandeep023/support-chat-server/adapters/postgres";
-import { RedisCacheStore } from "@gagandeep023/support-chat-server/adapters/redis";
+import {
+  createSupportChat,
+  AnthropicChatProvider,
+} from "@gagandeep023/support-chat-server";
+import { PostgresDataStore }
+  from "@gagandeep023/support-chat-server/adapters/postgres";
+import { RedisCacheStore }
+  from "@gagandeep023/support-chat-server/adapters/redis";
 
 const chat = createSupportChat({
-  data: new PostgresDataStore({ connectionString: process.env.DATABASE_URL }),
+  data: new PostgresDataStore({
+    connectionString: process.env.DATABASE_URL,
+  }),
   cache: new RedisCacheStore({ url: process.env.REDIS_URL }),
   secretKey: process.env.SUPPORT_CHAT_SECRET,
   ai: { chat: new AnthropicChatProvider({ model: "claude-sonnet-5" }) },
-  socketAdapter: { type: "redis" },   // required once you run more than one pod
+  // required once you run more than one pod
+  socketAdapter: { type: "redis" },
 });
 
-await chat.ingest(tenantId, { id: "billing", title: "Billing", content: markdown });
+await chat.ingest(tenantId, {
+  id: "billing",
+  title: "Billing",
+  content: markdown,
+});
 
 chat.attach(httpServer);
-process.on("SIGTERM", () => chat.drain("deploy").then(() => chat.close()));
+process.on("SIGTERM", () =>
+  chat.drain("deploy").then(() => chat.close()),
+);
 ```
 
 `ai` is optional. Omitting it runs the socket layer with no bot at all, which is
@@ -61,7 +75,8 @@ drivers are **optional peers**.
 Writing a fourth adapter is held to the same bar by a shared conformance suite:
 
 ```ts
-import { describeDataStore } from "@gagandeep023/support-chat-server/testing";
+import { describeDataStore }
+  from "@gagandeep023/support-chat-server/testing";
 describeDataStore("mongo", () => ({ store, seedTenant, dispose }));
 ```
 
@@ -75,7 +90,13 @@ The pieces are exported individually, so you can run retrieval without a socket
 in sight:
 
 ```ts
-import { KeywordIndex, tokenize, Retriever, chunkDocument, assemblePrompt } from "@gagandeep023/support-chat-server";
+import {
+  KeywordIndex,
+  tokenize,
+  Retriever,
+  chunkDocument,
+  assemblePrompt,
+} from "@gagandeep023/support-chat-server";
 ```
 
 ## Host tools, and two rules the framework enforces
@@ -86,10 +107,15 @@ so the host registers operations the model may call:
 ```ts
 chat.registerTool({
   name: "diagnose_charging_session",
-  description: "Find out what happened to a session that stopped unexpectedly.",
-  inputSchema: { type: "object", properties: { sessionId: { type: "string" } } },
+  description:
+    "Find out what happened to a session that stopped unexpectedly.",
+  inputSchema: {
+    type: "object",
+    properties: { sessionId: { type: "string" } },
+  },
   access: "read",
-  handler: ({ sessionId }, ctx) => diagnose(ctx.endUser.externalId, sessionId),
+  handler: ({ sessionId }, ctx) =>
+    diagnose(ctx.endUser.externalId, sessionId),
 });
 ```
 
@@ -110,7 +136,8 @@ The rules that decide a cause are a lookup table in your code, because a wrong
 diagnosis on a billing dispute is expensive and a prompt cannot be unit tested:
 
 ```ts
-import { runDiagnostic, renderDiagnosis } from "@gagandeep023/support-chat-server";
+import { runDiagnostic, renderDiagnosis }
+  from "@gagandeep023/support-chat-server";
 ```
 
 Every branch is a test with no model in the loop. The model's job is to
@@ -122,10 +149,18 @@ sentence. When no rule matches it says so and fetches a human.
 You own identity on both sides; there is no separate login to build.
 
 ```ts
-import { signUserIdentity, signAgentToken } from "@gagandeep023/support-chat-server";
+import { signUserIdentity, signAgentToken }
+  from "@gagandeep023/support-chat-server";
 
-const userHash = signUserIdentity(user.id, process.env.SUPPORT_CHAT_SECRET);
-const token = signAgentToken({ agentId, tenantId, name }, secret, { expiresIn: "5m" });
+const userHash = signUserIdentity(
+  user.id,
+  process.env.SUPPORT_CHAT_SECRET,
+);
+const token = signAgentToken(
+  { agentId, tenantId, name },
+  secret,
+  { expiresIn: "5m" },
+);
 ```
 
 The widget's publishable key identifies the **tenant and nothing more**. Signing

@@ -33,7 +33,8 @@ widget validates, and a failure means the same thing on both sides.
 ## The protocol
 
 ```ts
-import { /* frame schemas */ } from "@gagandeep023/support-chat-core/protocol";
+import { /* frame schemas */ }
+  from "@gagandeep023/support-chat-core/protocol";
 ```
 
 A separate entry point covering the widget frames, the agent frames, the

@@ -27,23 +27,33 @@ somebody else.
 ```tsx
 import { SupportChat } from "@gagandeep023/support-chat-widget/react";
 
-<SupportChat publishableKey="pk_live_..." userId={user.id} userHash={hash} />;
+<SupportChat
+  publishableKey="pk_live_..."
+  userId={user.id}
+  userHash={hash}
+/>;
 ```
 
 Or take the hook and draw it yourself:
 
 ```tsx
-import { useSupportChat } from "@gagandeep023/support-chat-widget/react";
+import { useSupportChat }
+  from "@gagandeep023/support-chat-widget/react";
 
-const { state, messages, send, connection } = useSupportChat({ publishableKey });
+const { state, messages, send, connection } =
+  useSupportChat({ publishableKey });
 ```
 
 ## Headless
 
 ```ts
-import { SupportChatClient, socketIoTransport } from "@gagandeep023/support-chat-widget";
+import { SupportChatClient, socketIoTransport }
+  from "@gagandeep023/support-chat-widget";
 
-const client = new SupportChatClient({ publishableKey, transport: socketIoTransport });
+const client = new SupportChatClient({
+  publishableKey,
+  transport: socketIoTransport,
+});
 ```
 
 `SupportChatClient` holds the whole conversation state machine: connection

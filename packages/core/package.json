@@ -1,6 +1,6 @@
 {
   "name": "@gagandeep023/support-chat-core",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Shared types, wire protocol, and provider interfaces for support-chat.",
   "keywords": [
     "support-chat",

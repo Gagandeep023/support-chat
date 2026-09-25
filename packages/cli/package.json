@@ -1,6 +1,6 @@
 {
   "name": "@gagandeep023/support-chat-cli",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Command line tools for support-chat: zero-infrastructure dev server, model health checks, and evaluation against your own docs.",
   "keywords": [
     "support-chat",

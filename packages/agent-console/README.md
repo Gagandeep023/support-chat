@@ -29,11 +29,16 @@ app.get("/api/support-chat/token", requireAuth, (req, res) => {
 ```
 
 ```tsx
-import { AgentConsole } from "@gagandeep023/support-chat-agent-console/react";
+import { AgentConsole }
+  from "@gagandeep023/support-chat-agent-console/react";
 
 <AgentConsole
   tenantId={TENANT}
-  fetchToken={() => fetch("/api/support-chat/token").then((r) => r.json()).then((d) => d.token)}
+  fetchToken={() =>
+    fetch("/api/support-chat/token")
+      .then((r) => r.json())
+      .then((d) => d.token)
+  }
 />;
 ```
 
@@ -44,13 +49,19 @@ overnight does not hold a long-lived credential.
 ## Headless, or your own UI
 
 ```ts
-import { AgentConsoleClient, socketIoTransport } from "@gagandeep023/support-chat-agent-console";
+import { AgentConsoleClient, socketIoTransport }
+  from "@gagandeep023/support-chat-agent-console";
 
-const client = new AgentConsoleClient({ tenantId, fetchToken, transport: socketIoTransport });
+const client = new AgentConsoleClient({
+  tenantId,
+  fetchToken,
+  transport: socketIoTransport,
+});
 ```
 
 ```tsx
-import { useAgentConsole } from "@gagandeep023/support-chat-agent-console/react";
+import { useAgentConsole }
+  from "@gagandeep023/support-chat-agent-console/react";
 ```
 
 ## What the client models

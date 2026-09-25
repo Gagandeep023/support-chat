@@ -1,6 +1,6 @@
 {
   "name": "@gagandeep023/support-chat-widget",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Embeddable support chat widget: headless client, web component, and React wrapper.",
   "keywords": [
     "support-chat",
