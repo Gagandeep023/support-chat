@@ -2,6 +2,11 @@
   "name": "@gagandeep023/support-chat-server",
   "version": "0.1.1",
   "description": "Mountable support-chat engine: HTTP router, socket gateway, and store interfaces.",
+  "keywords": [
+    "gagan",
+    "gagandeep",
+    "gagandeep bhatia"
+  ],
   "type": "module",
   "license": "MIT",
   "main": "./dist/index.cjs",

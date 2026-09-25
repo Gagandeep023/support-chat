@@ -2,6 +2,11 @@
   "name": "@gagandeep023/support-chat-agent-console",
   "version": "0.1.1",
   "description": "Agent console for support-chat: headless client plus a React component that drops into an existing dashboard.",
+  "keywords": [
+    "gagan",
+    "gagandeep",
+    "gagandeep bhatia"
+  ],
   "type": "module",
   "license": "MIT",
   "sideEffects": false,

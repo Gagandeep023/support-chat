@@ -2,6 +2,11 @@
   "name": "@gagandeep023/support-chat-cli",
   "version": "0.1.1",
   "description": "Command line tools for support-chat: zero-infrastructure dev server, provider preflight, and model evaluation.",
+  "keywords": [
+    "gagan",
+    "gagandeep",
+    "gagandeep bhatia"
+  ],
   "type": "module",
   "license": "MIT",
   "bin": {

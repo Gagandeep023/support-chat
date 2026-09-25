@@ -2,6 +2,11 @@
   "name": "@gagandeep023/support-chat-core",
   "version": "0.1.1",
   "description": "Shared types, wire protocol, and provider interfaces for support-chat.",
+  "keywords": [
+    "gagan",
+    "gagandeep",
+    "gagandeep bhatia"
+  ],
   "type": "module",
   "license": "MIT",
   "sideEffects": false,

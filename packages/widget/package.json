@@ -2,6 +2,11 @@
   "name": "@gagandeep023/support-chat-widget",
   "version": "0.1.1",
   "description": "Embeddable support chat widget: headless client, web component, and React wrapper.",
+  "keywords": [
+    "gagan",
+    "gagandeep",
+    "gagandeep bhatia"
+  ],
   "type": "module",
   "license": "MIT",
   "sideEffects": [
